@@ -1,0 +1,15 @@
+#this helps to build test on the model itself
+#the model in mention is random_online_staging
+# and we are running a test on the year column
+
+version: 2
+
+models:
+    - name: random_online_staging
+      description: "A practice at how test work"
+      columns:
+          - name: year
+            description: "one column of the table(in particulare the year)"
+            tests:
+                - not_null
+
