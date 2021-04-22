@@ -135,3 +135,308 @@ where id = 1;
 Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
 2021-04-20 21:37:58.266910 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d4f12e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d383910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d4c9310>]}
 2021-04-20 21:37:58.267330 (MainThread): Flushing usage events
+2021-04-22 00:30:32.443967 (MainThread): Running with dbt=0.19.1
+2021-04-22 00:30:32.908582 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/nathancarter/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-04-22 00:30:32.913258 (MainThread): Tracking: tracking
+2021-04-22 00:30:32.919439 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfe60a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cfeb7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cfeb6a0>]}
+2021-04-22 00:30:32.933584 (MainThread): Partial parsing not enabled
+2021-04-22 00:30:32.935079 (MainThread): Parsing macros/etc.sql
+2021-04-22 00:30:32.939391 (MainThread): Parsing macros/catalog.sql
+2021-04-22 00:30:32.946352 (MainThread): Parsing macros/adapters.sql
+2021-04-22 00:30:32.967785 (MainThread): Parsing macros/materializations/seed.sql
+2021-04-22 00:30:32.972056 (MainThread): Parsing macros/materializations/view.sql
+2021-04-22 00:30:32.975698 (MainThread): Parsing macros/materializations/table.sql
+2021-04-22 00:30:32.987710 (MainThread): Parsing macros/materializations/copy.sql
+2021-04-22 00:30:32.992927 (MainThread): Parsing macros/materializations/incremental.sql
+2021-04-22 00:30:33.006902 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-04-22 00:30:33.011750 (MainThread): Parsing macros/core.sql
+2021-04-22 00:30:33.017127 (MainThread): Parsing macros/materializations/helpers.sql
+2021-04-22 00:30:33.027827 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-04-22 00:30:33.030475 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-04-22 00:30:33.050033 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-04-22 00:30:33.084209 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-04-22 00:30:33.107141 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-04-22 00:30:33.109897 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-04-22 00:30:33.116980 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-04-22 00:30:33.132420 (MainThread): Parsing macros/materializations/table/table.sql
+2021-04-22 00:30:33.140386 (MainThread): Parsing macros/materializations/view/view.sql
+2021-04-22 00:30:33.147708 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-04-22 00:30:33.153595 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-04-22 00:30:33.155039 (MainThread): Parsing macros/etc/query.sql
+2021-04-22 00:30:33.156629 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-04-22 00:30:33.158774 (MainThread): Parsing macros/etc/datetime.sql
+2021-04-22 00:30:33.168836 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-04-22 00:30:33.171451 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-04-22 00:30:33.173640 (MainThread): Parsing macros/adapters/common.sql
+2021-04-22 00:30:33.219221 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-04-22 00:30:33.221662 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-04-22 00:30:33.224081 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-04-22 00:30:33.226396 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-04-22 00:30:33.234832 (MainThread): Partial parsing not enabled
+2021-04-22 00:30:33.296289 (MainThread): Acquiring new bigquery connection "model.my_demo_project.stg_random".
+2021-04-22 00:30:33.308306 (MainThread): Acquiring new bigquery connection "model.my_demo_project.transform".
+2021-04-22 00:30:33.378275 (MainThread): WARNING: Found documentation for resource "random_online_staging" which was not found or is disabled
+2021-04-22 00:30:33.378510 (MainThread): [WARNING]: Test 'test.my_demo_project.not_null_random_online_staging_year' (models/staging/schema.yml) depends on a node named 'random_online_staging' which was not found
+2021-04-22 00:30:33.388014 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_demo_project.example
+
+2021-04-22 00:30:33.388768 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f5ebdc1a-aeaf-41c6-af3f-8a59c21b2c2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d2aabe0>]}
+2021-04-22 00:30:33.396158 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f5ebdc1a-aeaf-41c6-af3f-8a59c21b2c2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d23e220>]}
+2021-04-22 00:30:33.396729 (MainThread): Found 2 models, 0 tests, 0 snapshots, 0 analyses, 156 macros, 0 operations, 1 seed file, 0 sources, 0 exposures
+2021-04-22 00:30:33.398245 (MainThread): 
+2021-04-22 00:30:33.399494 (MainThread): Acquiring new bigquery connection "master".
+2021-04-22 00:30:33.400961 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_autumnal".
+2021-04-22 00:30:33.401536 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-04-22 00:30:33.793842 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_autumnal_dbt_nate".
+2021-04-22 00:30:33.794297 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-04-22 00:30:33.803195 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-04-22 00:30:34.101643 (MainThread): 20:30:34 | Concurrency: 12 threads (target='dev')
+2021-04-22 00:30:34.102086 (MainThread): 20:30:34 | 
+2021-04-22 00:30:34.106719 (MainThread): unclosed <socket.socket fd=9, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2601:14a:c000:c90:6c07:cf5:5f7b:25d2', 62445, 0, 0), raddr=('2607:f8b0:4004:811::200a', 443, 0, 0)>
+2021-04-22 00:30:34.107239 (MainThread): unclosed <socket.socket fd=10, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2601:14a:c000:c90:6c07:cf5:5f7b:25d2', 62446, 0, 0), raddr=('2607:f8b0:4004:832::200a', 443, 0, 0)>
+2021-04-22 00:30:34.111507 (Thread-1): Began running node model.my_demo_project.stg_random
+2021-04-22 00:30:34.112066 (Thread-1): 20:30:34 | 1 of 1 START view model dbt_nate.stg_random.......................... [RUN]
+2021-04-22 00:30:34.112801 (Thread-1): Acquiring new bigquery connection "model.my_demo_project.stg_random".
+2021-04-22 00:30:34.113148 (Thread-1): Compiling model.my_demo_project.stg_random
+2021-04-22 00:30:34.117532 (Thread-1): Writing injected SQL for node "model.my_demo_project.stg_random"
+2021-04-22 00:30:34.119040 (Thread-1): finished collecting timing info
+2021-04-22 00:30:34.156822 (Thread-1): Writing runtime SQL for node "model.my_demo_project.stg_random"
+2021-04-22 00:30:34.157422 (Thread-1): Opening a new connection, currently in state closed
+2021-04-22 00:30:34.161732 (Thread-1): On model.my_demo_project.stg_random: /* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "dbt_within", "target_name": "dev", "node_id": "model.my_demo_project.stg_random"} */
+
+
+  create or replace view `autumnal`.`dbt_nate`.`stg_random`
+  OPTIONS()
+  as --staging of random online data
+with source_of_staging as (
+  select * from `autumnal`.`dbt_nate`.`random_online_data`
+),
+
+stage_random_data as (
+  select
+    Borough,
+    Grade,
+    Year,
+    Demographic
+  from source_of_staging
+)
+select
+  *
+from stage_random_data;
+
+
+2021-04-22 00:30:34.662790 (Thread-1): Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "dbt_within", "target_name": "dev", "node_id": "model.my_demo_project.stg_random"} */
+
+
+  create or replace view `autumnal`.`dbt_nate`.`stg_random`
+  OPTIONS()
+  as --staging of random online data
+with source_of_staging as (
+  select * from `autumnal`.`dbt_nate`.`random_online_data`
+),
+
+stage_random_data as (
+  select
+    Borough,
+    Grade,
+    Year,
+    Demographic
+  from source_of_staging
+)
+select
+  *
+from stage_random_data;
+
+
+2021-04-22 00:30:34.663125 (Thread-1): 404 GET https://bigquery.googleapis.com/bigquery/v2/projects/autumnal/queries/97c9b5c8-2b2b-4143-856b-09a0ba92d84c?maxResults=0&location=us-east4&prettyPrint=false: Not found: Table autumnal:dbt_nate.random_online_data was not found in location us-east4
+
+(job ID: 97c9b5c8-2b2b-4143-856b-09a0ba92d84c)
+
+                                                           -----Query Job SQL Follows-----                                                           
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "dbt_within", "target_name": "dev", "node_id": "model.my_demo_project.stg_random"} */
+   2:
+   3:
+   4:  create or replace view `autumnal`.`dbt_nate`.`stg_random`
+   5:  OPTIONS()
+   6:  as --staging of random online data
+   7:with source_of_staging as (
+   8:  select * from `autumnal`.`dbt_nate`.`random_online_data`
+   9:),
+  10:
+  11:stage_random_data as (
+  12:  select
+  13:    Borough,
+  14:    Grade,
+  15:    Year,
+  16:    Demographic
+  17:  from source_of_staging
+  18:)
+  19:select
+  20:  *
+  21:from stage_random_data;
+  22:
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+2021-04-22 00:30:34.663572 (Thread-1): finished collecting timing info
+2021-04-22 00:30:34.664283 (Thread-1): Runtime Error in model stg_random (models/staging/stg_random.sql)
+  404 GET https://bigquery.googleapis.com/bigquery/v2/projects/autumnal/queries/97c9b5c8-2b2b-4143-856b-09a0ba92d84c?maxResults=0&location=us-east4&prettyPrint=false: Not found: Table autumnal:dbt_nate.random_online_data was not found in location us-east4
+  
+  (job ID: 97c9b5c8-2b2b-4143-856b-09a0ba92d84c)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 149, in exception_handler
+    yield
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 534, in _retry_and_handle
+    return retry.retry_target(
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 327, in fn
+    return self._query_and_results(client, sql, conn, job_params)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 520, in _query_and_results
+    iterator = query_job.result(timeout=timeout)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1146, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/cloud/bigquery/job/base.py", line 631, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/api_core/future/polling.py", line 129, in result
+    self._blocking_poll(timeout=timeout, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1042, in _blocking_poll
+    super(QueryJob, self)._blocking_poll(timeout=timeout, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/api_core/future/polling.py", line 107, in _blocking_poll
+    retry_(self._done_or_raise)(**kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/api_core/retry.py", line 281, in retry_wrapped_func
+    return retry_target(
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/api_core/future/polling.py", line 85, in _done_or_raise
+    if not self.done(**kwargs):
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1022, in done
+    self._query_results = self._client._get_query_results(
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 1557, in _get_query_results
+    resource = self._call_api(
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 636, in _call_api
+    return call()
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/api_core/retry.py", line 281, in retry_wrapped_func
+    return retry_target(
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/google/cloud/_http.py", line 438, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.NotFound: 404 GET https://bigquery.googleapis.com/bigquery/v2/projects/autumnal/queries/97c9b5c8-2b2b-4143-856b-09a0ba92d84c?maxResults=0&location=us-east4&prettyPrint=false: Not found: Table autumnal:dbt_nate.random_online_data was not found in location us-east4
+
+(job ID: 97c9b5c8-2b2b-4143-856b-09a0ba92d84c)
+
+                                                           -----Query Job SQL Follows-----                                                           
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "dbt_within", "target_name": "dev", "node_id": "model.my_demo_project.stg_random"} */
+   2:
+   3:
+   4:  create or replace view `autumnal`.`dbt_nate`.`stg_random`
+   5:  OPTIONS()
+   6:  as --staging of random online data
+   7:with source_of_staging as (
+   8:  select * from `autumnal`.`dbt_nate`.`random_online_data`
+   9:),
+  10:
+  11:stage_random_data as (
+  12:  select
+  13:    Borough,
+  14:    Grade,
+  15:    Year,
+  16:    Demographic
+  17:  from source_of_staging
+  18:)
+  19:select
+  20:  *
+  21:from stage_random_data;
+  22:
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/task/base.py", line 344, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/task/base.py", line 287, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/task/base.py", line 389, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/task/run.py", line 248, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 22, in macro
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 65, in macro
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 227, in execute
+    return self.connections.execute(
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 338, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 329, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 534, in _retry_and_handle
+    return retry.retry_target(
+  File "/usr/local/Cellar/python@3.8/3.8.9/Frameworks/Python.framework/Versions/3.8/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/Cellar/dbt/0.19.1_1/libexec/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 181, in exception_handler
+    raise RuntimeException(exc_message)
+dbt.exceptions.RuntimeException: Runtime Error in model stg_random (models/staging/stg_random.sql)
+  404 GET https://bigquery.googleapis.com/bigquery/v2/projects/autumnal/queries/97c9b5c8-2b2b-4143-856b-09a0ba92d84c?maxResults=0&location=us-east4&prettyPrint=false: Not found: Table autumnal:dbt_nate.random_online_data was not found in location us-east4
+  
+  (job ID: 97c9b5c8-2b2b-4143-856b-09a0ba92d84c)
+2021-04-22 00:30:34.690984 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5ebdc1a-aeaf-41c6-af3f-8a59c21b2c2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d3b90a0>]}
+2021-04-22 00:30:34.691556 (Thread-1): 20:30:34 | 1 of 1 ERROR creating view model dbt_nate.stg_random................. [ERROR in 0.58s]
+2021-04-22 00:30:34.691782 (Thread-1): Finished running node model.my_demo_project.stg_random
+2021-04-22 00:30:34.693957 (MainThread): Acquiring new bigquery connection "master".
+2021-04-22 00:30:34.694599 (MainThread): 20:30:34 | 
+2021-04-22 00:30:34.694858 (MainThread): 20:30:34 | Finished running 1 view model in 1.30s.
+2021-04-22 00:30:34.695030 (MainThread): Connection 'master' was properly closed.
+2021-04-22 00:30:34.695136 (MainThread): Connection 'model.my_demo_project.stg_random' was properly closed.
+2021-04-22 00:30:34.701382 (MainThread): 
+2021-04-22 00:30:34.701725 (MainThread): Completed with 1 error and 0 warnings:
+2021-04-22 00:30:34.702090 (MainThread): 
+2021-04-22 00:30:34.702464 (MainThread): Runtime Error in model stg_random (models/staging/stg_random.sql)
+2021-04-22 00:30:34.702710 (MainThread):   404 GET https://bigquery.googleapis.com/bigquery/v2/projects/autumnal/queries/97c9b5c8-2b2b-4143-856b-09a0ba92d84c?maxResults=0&location=us-east4&prettyPrint=false: Not found: Table autumnal:dbt_nate.random_online_data was not found in location us-east4
+2021-04-22 00:30:34.702909 (MainThread):   
+2021-04-22 00:30:34.703110 (MainThread):   (job ID: 97c9b5c8-2b2b-4143-856b-09a0ba92d84c)
+2021-04-22 00:30:34.703298 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2021-04-22 00:30:34.703557 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d2e7d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfc7f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d3bafd0>]}
+2021-04-22 00:30:34.703934 (MainThread): Flushing usage events
