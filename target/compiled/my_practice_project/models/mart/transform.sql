@@ -1,15 +1,11 @@
-{{
-    config(
-        materialized = 'table'
-    )
-}}
+
 
 
 
 with random as (
   select
     *
-  from {{ ref('stg_random') }}
+  from `autumnal`.`dbt_nate_stage_view`.`stg_random`
 ),
 
 

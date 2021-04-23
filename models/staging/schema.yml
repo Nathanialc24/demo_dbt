@@ -5,7 +5,7 @@
 version: 2
 
 models:
-    - name: random_online_staging
+    - name: stg_random
       description: "A practice at how test work"
       columns:
           - name: year

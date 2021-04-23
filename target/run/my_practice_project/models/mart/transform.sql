@@ -1,15 +1,18 @@
-{{
-    config(
-        materialized = 'table'
-    )
-}}
+
+
+  create or replace table `autumnal`.`dbt_nate_transform_table`.`transform`
+  
+  
+  OPTIONS()
+  as (
+    
 
 
 
 with random as (
   select
     *
-  from {{ ref('stg_random') }}
+  from `autumnal`.`dbt_nate_stage_view`.`stg_random`
 ),
 
 
@@ -34,3 +37,5 @@ FROM random
 )
 
 select * from final
+  );
+    

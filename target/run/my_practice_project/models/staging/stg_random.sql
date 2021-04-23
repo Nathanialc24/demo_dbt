@@ -1,9 +1,8 @@
-{{
-    config(
-        schema = 'stage_view',
-        materialized = 'view'
-    )
-}}
+
+
+  create or replace view `autumnal`.`dbt_nate_stage_view`.`stg_random`
+  OPTIONS()
+  as 
 
 
 
@@ -11,7 +10,7 @@
 
 --staging of random online data
 with source_of_staging as (
-  select * from {{ ref('random_online_data') }}
+  select * from `autumnal`.`dbt_nate`.`random_online_data`
 ),
 
 stage_random_data as (
@@ -24,4 +23,5 @@ stage_random_data as (
 )
 select
   *
-from stage_random_data
+from stage_random_data;
+

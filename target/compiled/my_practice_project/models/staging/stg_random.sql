@@ -1,9 +1,4 @@
-{{
-    config(
-        schema = 'stage_view',
-        materialized = 'view'
-    )
-}}
+
 
 
 
@@ -11,7 +6,7 @@
 
 --staging of random online data
 with source_of_staging as (
-  select * from {{ ref('random_online_data') }}
+  select * from `autumnal`.`dbt_nate`.`random_online_data`
 ),
 
 stage_random_data as (
